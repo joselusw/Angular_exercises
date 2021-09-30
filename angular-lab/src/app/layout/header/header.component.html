@@ -1,1 +1,37 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row><span>Angular Lab</span></mat-toolbar-row>
+</mat-toolbar>
+
+<nav
+  mat-tab-nav-bar
+  mat-align-tabs="center"
+  color="accent"
+  backgroundColor="primary"
+  routerLinkActive="active"
+>
+  <a
+    mat-tab-link
+    routerLink="/home"
+    routerLinkActive
+    #rla="routerLinkActive"
+    mat-tab-link
+    [active]="rla.isActive"
+    >Home</a
+  >
+  <a
+    mat-tab-link
+    routerLink="/login"
+    routerLinkActive
+    #rla2="routerLinkActive"
+    [active]="rla2.isActive"
+    >Login</a
+  >
+  <a
+    mat-tab-link
+    routerLink="/about"
+    routerLinkActive
+    #rla3="routerLinkActive"
+    [active]="rla3.isActive"
+    >About</a
+  >
+</nav>
