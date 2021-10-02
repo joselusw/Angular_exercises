@@ -23,4 +23,8 @@ export class HeaderComponent implements OnInit {
     this.authService.logout();
     await this.router.navigate(["login"]);
   }
+
+  getUsername(): string {
+    return this.authService.getUsername();
+  }
 }

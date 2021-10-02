@@ -1,13 +1,13 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row class="header-row"
-    ><span>Angular Lab</span>
+  <mat-toolbar-row class="header-row">
+    <span>Angular Lab</span>
+    <span *ngIf="isLogged()">&nbsp;-&nbsp;{{ getUsername() }}</span>
     <div class="logout">
       <button
         *ngIf="isLogged()"
         (click)="logout()"
         mat-icon-button
         color="white"
-        aria-label="Logout"
       >
         <mat-icon>logout</mat-icon>
       </button>
