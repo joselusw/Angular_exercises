@@ -5,10 +5,8 @@ import { LocalStorage } from "../utils/constants/LocalStorage";
   providedIn: "root",
 })
 export class AuthenticationService {
-  //private readonly authUser = 'master8@lemoncode.net';
-  //private readonly authPwd = '12345678';
-  private readonly authUser = "1";
-  private readonly authPwd = "1";
+  private readonly authUser = "master8@lemoncode.net";
+  private readonly authPwd = "12345678";
 
   constructor() {}
 
