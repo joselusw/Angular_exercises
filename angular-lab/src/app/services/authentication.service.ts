@@ -1,31 +1,32 @@
-import { Injectable } from '@angular/core';
-import { LocalStorage } from '../utils/constants/LocalStorage';
+import { Injectable } from "@angular/core";
+import { LocalStorage } from "../utils/constants/LocalStorage";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthenticationService {
+  //private readonly authUser = 'master8@lemoncode.net';
+  //private readonly authPwd = '12345678';
+  private readonly authUser = "1";
+  private readonly authPwd = "1";
 
-  private readonly authUser = 'master8@lemoncode.net';
-  private readonly authPwd = '12345678';
-
-  constructor() { }
+  constructor() {}
 
   public login(username: string, password: string): boolean {
     if (username === this.authUser && password === this.authPwd) {
-      localStorage.setItem(LocalStorage.USER_LOGGED, 'true');
+      localStorage.setItem(LocalStorage.USER_LOGGED, "true");
       return true;
     } else {
       return false;
     }
   }
-  
+
   public logout(): void {
     localStorage.removeItem(LocalStorage.USER_LOGGED);
   }
 
   public isLogged(): boolean {
-    return localStorage.getItem(LocalStorage.USER_LOGGED) === 'true';
+    return localStorage.getItem(LocalStorage.USER_LOGGED) === "true";
   }
 
   public getUsername(): string {
