@@ -13,25 +13,63 @@
     mat-tab-link
     routerLink="/home"
     routerLinkActive
-    #rla="routerLinkActive"
+    #horl="routerLinkActive"
     mat-tab-link
-    [active]="rla.isActive"
+    [active]="horl.isActive"
     >Home</a
+  >
+  <a
+    mat-tab-link
+    routerLink="/dashboard"
+    routerLinkActive
+    #darl="routerLinkActive"
+    mat-tab-link
+    [active]="darl.isActive"
+    *ngIf="isLogged()"
+    >Dashboard</a
+  >
+  <a
+    mat-tab-link
+    routerLink="/galery"
+    routerLinkActive
+    #garl="routerLinkActive"
+    mat-tab-link
+    [active]="garl.isActive"
+    >Galery</a
   >
   <a
     mat-tab-link
     routerLink="/login"
     routerLinkActive
-    #rla2="routerLinkActive"
-    [active]="rla2.isActive"
+    #lorl="routerLinkActive"
+    [active]="lorl.isActive"
+    *ngIf="!isLogged()"
     >Login</a
+  >
+  <a
+    mat-tab-link
+    routerLink="/crud"
+    routerLinkActive
+    #crrl="routerLinkActive"
+    mat-tab-link
+    [active]="crrl.isActive"
+    >Crud</a
+  >
+  <a
+    mat-tab-link
+    routerLink="/profile"
+    routerLinkActive
+    #prrl="routerLinkActive"
+    mat-tab-link
+    [active]="prrl.isActive"
+    >Profile</a
   >
   <a
     mat-tab-link
     routerLink="/about"
     routerLinkActive
-    #rla3="routerLinkActive"
-    [active]="rla3.isActive"
+    #abrl="routerLinkActive"
+    [active]="abrl.isActive"
     >About</a
   >
 </nav>
